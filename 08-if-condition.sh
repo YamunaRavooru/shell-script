@@ -1,6 +1,6 @@
 #!/bin/bash
  NUMBER=$1
- if [ $NUMBER -gt 100 ]
+ if [ $NUMBER -ge 100 ]
   then
      echo "The given number is $NUMBER gratet than 100"
      else  
