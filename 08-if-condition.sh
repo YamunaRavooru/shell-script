@@ -7,3 +7,4 @@ then
   echo "today is $TODAY :: holiday"
  else
  echo "today is working day ::$TODAY" 
+ fi
