@@ -1,6 +1,6 @@
 #!/bin/bash
 today={"mon""tue""wed""thu""fri""sat""sun"}
-echo"print today:: ${today[6]}"
+echo "print today:: ${today[6]}"
 if [ ${today[6]} -eq "sun" ] 
 then
  printf "weekend\n" 
