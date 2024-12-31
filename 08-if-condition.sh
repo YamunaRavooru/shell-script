@@ -1,11 +1,10 @@
 #!/bin/bash
-
- datetoday="$(date|cut -d ' ' -f 1)"
- s2="sun"
-
-if ( $datetoday == $s2)
-then
-  echo "today is  $datetoday :: holiday"
+today="$(date +%a)"
+if [ "${today}" -eq 7 ] 
+ printf "weekend\n" 
  else
- echo "today is working day ::$datetoday" 
- fi
+  printf "not weekend\n"
+  fi
+exit 0
+ 
+ 
