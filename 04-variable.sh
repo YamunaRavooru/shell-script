@@ -1,4 +1,4 @@
 #!/bin/bash
 echo "Enter user name::"
-read USERNAME
+read -s USERNAME
 echo "print user name is ::$USERNAME"
