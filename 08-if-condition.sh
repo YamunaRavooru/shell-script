@@ -1,10 +1,11 @@
 #!/bin/bash
-TODAY=$1
-DAYS=("mon" "Tue""wed""Thu""Fri""Sat""Sunday")
-echo "enter today is::$TODAY"
-if (( $TODAY -eq ${DAYS[6]}))
+
+ datetoday="$(date|cut -d ' ' -f 1)"
+ s2="sun"
+
+if ( $datetoday == $s2)
 then
-  echo "today is $TODAY :: holiday"
+  echo "today is  $datetoday :: holiday"
  else
- echo "today is working day ::$TODAY" 
+ echo "today is working day ::$datetoday" 
  fi
