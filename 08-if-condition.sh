@@ -2,7 +2,7 @@
  NUMBER=$1
  if [ $NUMBER -ge 100 ]
   then
-     echo "The given number is $NUMBER gratet than 100"
+     echo "The given number is $NUMBER gratet than or equal to 100"
      else  
       echo "The given number is $NUMBER less than 100"
    fi   
