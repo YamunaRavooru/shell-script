@@ -1,12 +1,8 @@
 #!/bin/bash
-today=( "mon" "tue" "wed" "thu" "fri" "sat" "sun")
-echo "print today:: ${today[6]}"
-if [ ${today[6]} -eq 6 ] 
-then
- printf "weekend\n" 
- else
-  printf "not weekend\n"
-  fi
-exit 0
- 
- 
+ NUMBER=$1
+ if [$NUMBER -gt 100]
+  then
+     echo "The given number is $NUMBER gratet than 100"
+     else  
+      echo "The given number is $NUMBER less than 100"
+   fi   
