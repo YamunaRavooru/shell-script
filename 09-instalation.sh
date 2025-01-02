@@ -13,9 +13,10 @@ then
          # echo "Git Installed.... Sucessful"
          else 
           echo "MYSQL Installed....Failure"
-          exit 1
+        
         # echo "Git Installed.... Failure"
-        fi   
+        fi
+        exit 1   
      else 
      echo "mysql already.....installed" 
     fi 
