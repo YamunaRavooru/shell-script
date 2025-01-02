@@ -6,7 +6,7 @@ then
     dnf install mysql -y
 fi
 echo "Error: you must have sudo access to run this script"     
-#exit 1
+exit 1
 
 dnf install git -y
 
