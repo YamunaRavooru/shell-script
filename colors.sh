@@ -14,7 +14,7 @@ validate() {
 }
 if [ $USERID -ne 0 ]
 then
-  echo -e " Erorr:Only $R Root user access this script "
+  echo -e " Erorr:$R Only Root user access this script "
   exit 1
 fi
 dnf list installed mysql
