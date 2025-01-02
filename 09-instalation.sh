@@ -4,10 +4,8 @@ USERID=$(id -u)
 if [ $USERID -eq 0 ] 
 then
     dnf list intalled mysql
-
-    if [ $? -ne 0 ]
-
-    then
+    if [ $? -nq 0 ]
+     then
        dnf install mysql -y
          if [ $? -eq  0 ]
          then
