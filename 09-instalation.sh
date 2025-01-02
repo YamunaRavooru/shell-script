@@ -7,12 +7,12 @@ then
     if [ $? -ne 0 ]
      then
       dnf install mysql -y
-      if [ $? -eq 0 ]
-      then 
-      echo "mysql installed.....sucessfully"
-     else
-      echo "mysql installed....failure"
-     fi
+    #   if [ $? -eq 0 ]
+    #   then 
+    #   echo "mysql installed.....sucessfully"
+    #  else
+    #   echo "mysql installed....failure"
+    #  fi
      else
       echo "mysql already.....installed" 
     fi 
