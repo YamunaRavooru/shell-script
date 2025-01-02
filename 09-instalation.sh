@@ -7,12 +7,13 @@ then
     if [ $? -nq 0 ]
     then
        dnf install mysqll -y
-         if [ $? -eq 0 ]
+         if [ $? -nq 0 ]
          then
-        echo "MYSQL Installed....Successful"
-        # echo "Git Installed.... Sucessful"
-       else 
-        echo "MYSQL Installed....Failure"
+         echo "MYSQL Installed....Successful"
+         # echo "Git Installed.... Sucessful"
+         else 
+          echo "MYSQL Installed....Failure"
+          exit 1
         # echo "Git Installed.... Failure"
         fi   
      else 
