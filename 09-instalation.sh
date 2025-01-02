@@ -6,7 +6,7 @@ then
     dnf install mysql -y
     dnf install git -y
 fi
-if [$? -eq 0 ]
+if [ $? -eq 0 ]
 then
   echo "MYSQL Installed....Successful"
  else 
