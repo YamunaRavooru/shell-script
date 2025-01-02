@@ -19,7 +19,6 @@ then
         
          fi   
      else 
-     exit 1
      echo "mysql already.....installed" 
     fi 
     #    dnf install git -y
