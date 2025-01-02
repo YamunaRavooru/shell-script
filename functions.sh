@@ -12,8 +12,21 @@ validate() {
 if [ $USERID -ne 0 ]
 then
   echo "Erorr:Only Root user access this script "
+  exit 1
 fi
-dnf install mysql -y
-validate $?  "Installing mysql"
-dnf install git -y
-validate $? "Installing git"
+dnf list installed mysql
+if [ $? -ne 0 ]
+then
+    dnf install mysql -y
+    validate $?  "Installing mysql"
+ else
+   echo "mysql is already installed "   
+fi
+dnf list installed git
+if [ $? -ne 0 ]
+then   
+   dnf install git -y
+   validate $? "Installing git"
+else
+   echo "git is already installed"
+fi      
