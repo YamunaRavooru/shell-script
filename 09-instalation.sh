@@ -6,7 +6,7 @@ then
     dnf list intalled mysql
     if [ $? -nq 0 ]
     then
-       dnf install mysqll -y
+       dnf install mysql -y
          if [ $? -nq 0 ]
          then
          echo "MYSQL Installed....Successful"
