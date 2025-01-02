@@ -5,6 +5,7 @@ if [ $USERID -eq 0 ]
 then
     dnf list intalled mysql
     if [ $? -nq 0 ]
+    
     then
        dnf install mysqll -y
          if [ $? -nq 0 ]
