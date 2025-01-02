@@ -6,20 +6,32 @@ then
 echo "Error: you must have root acess fot this script"
 exit 1
 fi
-dnf install mysqll -y
+dnf list installed mysql
+if [ $? -ne 0 ] #not installed
+then
+   dnf install mysql -y
+    if [ $? -ne 0 ]
+     then
+       echo "mysql installed.....failure"
+       exit 1
+     else 
+      echo  "mysql installed.....success"
+    fi
+ else 
+ echo "mysql already installed"
+fi    
+dnf list installed git
 if [ $? -ne 0 ]
 then
- echo "mysql installed.....failure"
- exit 1
- else 
- echo  "mysql installed.....sucess"
- fi
-dnf install git -y
+   dnf install git -y
 
-if [ $? -ne 0 ]
-then
- echo "git installed.....failure"
- exit 1
- else 
- echo  "git installed.....sucess"
- fi
+     if [ $? -ne 0 ]
+     then
+      echo "git installed.....failure"
+      exit 1
+     else 
+       echo  "git installed.....success"
+   fi
+ else
+   echo "git is alerady installed"
+ fi    
