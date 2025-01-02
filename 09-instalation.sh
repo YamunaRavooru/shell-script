@@ -15,9 +15,9 @@ then
           echo "MYSQL Installed....Failure"
         
         # echo "Git Installed.... Failure"
-        fi
-        exit 1   
+        fi   
      else 
+     exit 1
      echo "mysql already.....installed" 
     fi 
     #    dnf install git -y
