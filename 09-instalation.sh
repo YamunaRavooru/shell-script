@@ -4,11 +4,15 @@ USERID=$(id -u)
 if [ $USERID -eq 0 ] 
 then
     dnf list intalled mysql
-    if [ $? -eq 0 ]
+    if [ $? -ne 0 ]
      then
-     echo "mysql already.....installed" 
+      dnf install mysql -y
+      if [ $? -eq 0 ]
+      then 
+      echo "mysql installed.....sucessfully"
      else
-     dnf install mysql -y
+      echo "mysql already.....installed" 
+    
     fi 
     #    dnf install git -y
 
