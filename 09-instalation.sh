@@ -11,8 +11,10 @@ then
       then 
       echo "mysql installed.....sucessfully"
      else
+      echo "mysql installed....failure"
+     fi
+     else
       echo "mysql already.....installed" 
-    
     fi 
     #    dnf install git -y
 
