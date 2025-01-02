@@ -6,7 +6,7 @@ then
 echo "Error: you must have root acess fot this script"
 exit 1
 fi
-dnf install mysql -y
+dnf install mysqll -y
 if [ $? -ne 0 ]
 then
  echo "mysql installed.....failure"
