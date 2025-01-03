@@ -25,7 +25,7 @@ check_root() {
    exit 1
  fi
 }
-echo "Script started executing at: $TIMESTAMP" &>>$LOG_FILE_NAME
+echo "Script started executing at: $TIMESTAMP"   &>>$LOG_FILE_NAME
 
 file_to_delete=$( find $SOURCE_DIR -name  "*.log" -mtime +14)  
 echo "files to be deleted : $file_to_delete"
