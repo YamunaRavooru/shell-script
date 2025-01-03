@@ -25,6 +25,5 @@ check_root() {
    exit 1
  fi
 }
-mkdir -p /var/log/script-logs
 file_to_delete=$( find SOURCE_DIR -name  "*.log" -mtime +14)
 echo "files to be deleted : $file_to_delete"
