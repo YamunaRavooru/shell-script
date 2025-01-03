@@ -4,7 +4,7 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m" 
-LOG_FOLDER="/var/log/shellscript.logs"
+LOG_FOLDER="/var/log/shellscript-logs"
 LOG_FILE=$(echo $0 | cut -d "." -f1)
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
 LOG_FILE_NAME="$LOG_FOLDER/$LOG_FILE-$TIMESTAMP"
@@ -17,13 +17,7 @@ validate() {
       echo  -e "$2..... $G Success $N" 
     fi  
 }
-check-root() {
-  if [ $USERID -ne 0 ]
-   then
-    echo -e " Erorr:$R Only Root user access this script $N "
-   exit 1
- fi
-}
+
 echo "Script started executing at :$TIMESTAMP" &>>$LOG_FILE_NAME
 check-root 
 for packages in $@
