@@ -17,12 +17,15 @@ validate() {
       echo  -e "$2..... $G Success $N" 
     fi  
 }
+check-root() {
+  if [ $USERID -ne 0 ]
+   then
+    echo -e " Erorr:$R Only Root user access this script $N "
+   exit 1
+ fi
+}
 echo "Script started executing at :$TIMESTAMP" &>>$LOG_FILE_NAME
-if [ $USERID -ne 0 ]
-then
-  echo -e " Erorr:$R Only Root user access this script $N "
-  exit 1
-fi
+check-root 
 for packages in $@
 do
    dnf list install $Packages  &>>LOG_FILE_NAME
