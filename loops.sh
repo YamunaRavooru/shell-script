@@ -17,7 +17,13 @@ validate() {
       echo  -e "$2..... $G Success $N" 
     fi  
 }
-
+check-root() {
+  if [ $USERID -ne 0 ]
+   then
+    echo -e " Erorr:$R Only Root user access this script $N "
+   exit 1
+ fi
+}
 echo "Script started executing at :$TIMESTAMP" &>>$LOG_FILE_NAME
 check-root 
 for packages in $@
