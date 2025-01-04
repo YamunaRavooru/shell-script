@@ -16,4 +16,4 @@ validate() {
       echo  -e "$2..... $G Success $N" 
     fi  
 }
-dnf install mysql -y  &>>LOG_FILE_NAME
+dnf install mysql -y  &>>$LOG_FILE_NAME
