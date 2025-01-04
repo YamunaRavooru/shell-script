@@ -3,6 +3,7 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m" 
+USERID=$( id -u )
 LOG_FOLDER="/var/log/shellscript-logs"
 LOG_FILE=$(echo $0 | cut -d "." -f1)
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
@@ -16,5 +17,13 @@ validate() {
       echo  -e "$2..... $G Success $N" 
     fi  
 }
+CHECK_ROOT() {
+  if [ $USERID -ne 0 ]
+   then
+    echo -e " Erorr:$R Only Root user access this script $N "
+   exit 1
+ fi
+}
+CHECK_ROOT
 mkdir -p  /var/log/shellscript-logs
 dnf install mysql -y  &>>$LOG_FILE_NAME
