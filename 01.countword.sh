@@ -16,5 +16,5 @@ validate() {
       echo  -e "$2..... $G Success $N" 
     fi  
 }
-mkdir -p shellscript-logs
+mkdir -p  /var/log/shellscript-logs
 dnf install mysql -y  &>>$LOG_FILE_NAME
