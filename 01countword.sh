@@ -27,3 +27,4 @@ CHECK_ROOT() {
 CHECK_ROOT
 mkdir -p  /var/log/shellscript-logs
 dnf install mysql -y  &>>$LOG_FILE_NAME
+validate $? "installing mysql"
