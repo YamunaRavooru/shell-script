@@ -10,4 +10,5 @@ LOG_FILE_NAME="$LOG_FOLDER/$LOG_FILE-$TIMESTAMP.log"
 #   echo $file
 
 # done <  01-variable.sh
-perl -e loops.sh
+ file=$(perl -e loops.sh)
+ echo $file
