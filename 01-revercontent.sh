@@ -2,8 +2,8 @@
 
 file=$(tac hello.sh)
 
-while read -r reverse
+while read -r line
 do
-echo $reverse
+echo $line
 
 done < $file
