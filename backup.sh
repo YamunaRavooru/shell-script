@@ -49,5 +49,5 @@ echo "script started execute at :$TIMESTAMP" >>$LOG_FILE_NAME
      done <<< $file
     else
     echo -e "$R ERORR: Failed to create zip file"
-
     fi
+fi
