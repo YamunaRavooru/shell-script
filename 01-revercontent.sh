@@ -9,6 +9,4 @@ while read -r line
 do
   echo $line
 
-
-
 done < 01-hello.sh
