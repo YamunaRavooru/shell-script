@@ -9,4 +9,4 @@ while read -r file
 do
   echo $file
 
-done << 01-hello.sh
+done <<< 01-hello.sh
