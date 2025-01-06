@@ -1,6 +1,6 @@
 #!/bin/bash/
 
-file=$(tac loops.sh)
+file=$(tac hello.sh)
 
 while read -r reverse
 do
