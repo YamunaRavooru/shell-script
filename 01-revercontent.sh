@@ -5,8 +5,9 @@ LOG_FILE=$(echo $0| cut -d "." -f1)
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
 LOG_FILE_NAME="$LOG_FOLDER/$LOG_FILE-$TIMESTAMP.log"
 
-while read -r file
-do
-  echo $file
+# while read -r file
+# do
+#   echo $file
 
-done <  01-variable.sh
+# done <  01-variable.sh
+perl -e loops.sh
