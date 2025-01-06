@@ -7,7 +7,7 @@ LOG_FILE_NAME="$LOG_FOLDER/$LOG_FILE-$TIMESTAMP.log"
 
 while read -r line
 do
-  echo tail -r $line
+  echo $line
 
 
 
