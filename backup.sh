@@ -46,7 +46,7 @@ echo "script started execute at :$TIMESTAMP"  >>$LOG_FILE_NAME
          echo -e "sucessfuly created zip files older than $days"
          while read -r filename
          do
-           echo "deleting files:$filename"
+           echo "deleting files:$filename" &>>LOG_FILE_NAME
            rm -rf $filename
            echo "deleted files:$filename"
          done <<< $file
