@@ -6,4 +6,4 @@ while read -r line
 do
 echo "$line \n"
 
-done < $file
+done <<< $file
