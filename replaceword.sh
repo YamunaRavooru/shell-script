@@ -1,6 +1,4 @@
 #!/bin/bash
-echo "Find the file you want to search the word in?"
-read filename
-echo "Enter the word you want to find."  
-read word1
-grep $word1 $filename
+read new-text
+sed -i 's/hello/new-text/g' 02-variable.sh
+
