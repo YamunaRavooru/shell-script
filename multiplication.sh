@@ -15,11 +15,12 @@ USAGE() {
     echo  -e "please enter number as argument for multiplication "
     exit 1
 }
+echo Enter the number for multiplication: $1
 if [ $# -lt 2 ]
 then
    USAGE
 fi
-echo Enter the number for multiplication: $1
+
  
 
  for i in {1..10}
