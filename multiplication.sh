@@ -12,7 +12,7 @@ TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
 LOG_FILE_NAME="$LOG_FOLDER/$LOG_FILE-$TIMESTAMP.log"
 USAGE() {
 
-    echo  -e "$R USAGE:$N sh backup.sh <SOURCE_DIR>  <DESTINATION_DIR> <DAYS(optional)>"
+    echo  -e "please enter number as argument for multiplication "
     exit 1
 }
 if [ $# -lt 2 ]
