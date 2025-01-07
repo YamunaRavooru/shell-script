@@ -1,6 +1,6 @@
 #!/bin/bash/
 
-file=$(tac hello.sh)
+file=$(tac "01-variable.sh \n")
 
 while read -r line
 do
