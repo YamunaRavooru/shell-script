@@ -1,9 +1,9 @@
 #!/bin/bash/
 
-file=$(tac "01-variable.sh")
+file=$(tac "01countword.sh")
 
 while read -r line
 do
-echo "$line \n"
+echo "$line "
 
-done <<< $file
+done < $file
