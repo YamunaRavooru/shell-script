@@ -1,3 +1,3 @@
 #!/bin/bash
-file=$(grep -i hello 02-variable.sh)
-replace hell $file
+file=$(grep -w hello 02-variable.sh)
+$file=$1
