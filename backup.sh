@@ -21,12 +21,12 @@ if [ $# -lt 2 ]
 then
    USAGE
 fi
-if [ ! -d $SOURCE_DIR ]
+if [ ! -d "$SOURCE_DIR" ]
 then
  echo -e "$SOURCE_DIR does not exist.....please check"
  exit 1
 fi
-if [ ! -d $DESTINATION_DIR ]
+if [ ! -d "$DESTINATION_DIR" ]
 then
  echo -e "$DESTINATION_DIR does not exist.....please check"
  exit 1
@@ -38,6 +38,7 @@ echo "script started execute at :$TIMESTAMP" >>$LOG_FILE_NAME
  then
     echo "files are :$file"
     ZIP_FILE="$DESTINATION_DIR/app-logs-$TIMESTAMP.zip"
+
     find $SOURCE_DIR -name "*.log" -mtime +$DAYS | zip -@ "$ZIP_FILE"
        if [ -f  "$ZIP_FILE" ]
         then
@@ -51,4 +52,5 @@ echo "script started execute at :$TIMESTAMP" >>$LOG_FILE_NAME
          else
          echo -e "$R ERORR: Failed to create zip file"
         fi
+        echo -e "No files are found older than $Days"
   fi
