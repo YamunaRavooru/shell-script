@@ -1,9 +1,9 @@
 #!/bin/bash/
 
-file=$(tac "01-variable.sh \n")
+file=$(tac "01-variable.sh")
 
 while read -r line
 do
-echo $line
+echo "$line \n"
 
 done < $file
