@@ -16,7 +16,7 @@ USAGE() {
     exit 1
 }
 echo Enter the number for multiplication: $1
-if [ $? -nq 0 ]
+if [ $? -eq 0 ]
 then
    USAGE
 fi
