@@ -53,5 +53,5 @@ echo "script started execute at :$TIMESTAMP" >>$LOG_FILE_NAME
          echo -e "$R ERORR: Failed to create zip file"
         fi
   else   
-        echo -e "No files are found older than $Days"
+        echo -e "$N No files are found older than $DAYS"
   fi
