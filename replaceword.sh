@@ -1,2 +1,2 @@
 #!/bin/bash
-grep hello variable.sh 
+grep hello 02-variable.sh
