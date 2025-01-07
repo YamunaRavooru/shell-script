@@ -2,4 +2,4 @@
 
 msg="Script2"
 echo $msg
-sh script2.sh
+sh script1.sh
