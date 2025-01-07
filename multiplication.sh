@@ -16,10 +16,10 @@ USAGE() {
     exit 1
 }
 echo Enter the number for multiplication: $1
-# if [ $# -lt 2 ]
-# then
-#    USAGE
-# fi
+if [ $? -nq 0 ]
+then
+   USAGE
+fi
 
  
 
