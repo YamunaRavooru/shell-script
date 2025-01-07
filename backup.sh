@@ -31,7 +31,7 @@ then
  echo -e "$DESTINATION_DIR does not exist.....please check"
  exit 1
 fi
-echo  "files are:$LOG_FILE_NAME"
+
 echo "script started execute at :$TIMESTAMP"  >>$LOG_FILE_NAME 
 
  file=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
