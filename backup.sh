@@ -8,7 +8,7 @@ SOURCE_DIR=$1
 DESTINATION_DIR=$2
 DAYS=${3:-14}
 LOG_FOLDER="/home/ec2-user/shellscript-logs"
-LOG_FILE=$(echo $0 | cut -d "." -f1)
+LOG_FILE=$(echo $0 | awk -F "/" '{print $NF}'|cut -d "." -f1)
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
 LOG_FILE_NAME="$LOG_FOLDER/$LOG_FILE-$TIMESTAMP.log"
 USAGE() {
@@ -16,7 +16,7 @@ USAGE() {
     echo  -e "$R USAGE:$N sh backup.sh <SOURCE_DIR>  <DESTINATION_DIR> <DAYS(optional)>"
     exit 1
 }
-mkdir -p  /home/ec2-user/shellscript-logs
+mkdir -p /home/ec2-user/shellscript-logs
 if [ $# -lt 2 ]
 then
    USAGE
@@ -31,7 +31,7 @@ then
  echo -e "$DESTINATION_DIR does not exist.....please check"
  exit 1
 fi
-echo "script started execute at :$TIMESTAMP" >>$LOG_FILE_NAME 
+echo "script started execute at :$TIMESTAMP"  >>$LOG_FILE_NAME 
 
  file=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
  if [ -n "$file" ]
