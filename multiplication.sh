@@ -10,16 +10,8 @@ LOG_FOLDER="/home/ec2-user/shellscript-logs"
 LOG_FILE=$(echo $0 | cut -d "." -f1)
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
 LOG_FILE_NAME="$LOG_FOLDER/$LOG_FILE-$TIMESTAMP.log"
-USAGE() {
 
-    echo  -e "please enter number as argument for multiplication "
-    exit 1
-}
 echo Enter the number for multiplication: $1
-if [ $? -eq 0 ]
-then
-   USAGE
-fi
 
  
 
