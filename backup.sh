@@ -43,7 +43,7 @@ echo "script started execute at :$TIMESTAMP"  >>$LOG_FILE_NAME
     find $SOURCE_DIR -name "*.log" -mtime +$DAYS | zip -@ "$ZIP_FILE"
        if [ -f  "$ZIP_FILE" ]
         then
-         echo -e "sucessfuly created zip files older than $days"
+         echo -e "sucessfuly created zip files older than $DAYS"
          while read -r filename
          do
            echo "deleting files:$filename" &>>LOG_FILE_NAME
